@@ -4,7 +4,8 @@
     <title>Vanilla JS Github Pages Demo</title>
 </head>
 
-<body background="images/sb-background.gif" style="font-family:'Times New Roman', Times, serif; color: white;">
+<body id="sb-desktop" background="images/sb-background.gif"
+    style="font-family:'Times New Roman', Times, serif; color: white;">
     <audio id="sb-background-sound" style="display: none;" controls loop>
         <source src="sound/network.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -32,6 +33,50 @@
             </td>
         </tr>
     </table>
+    <table border="0" style="position: absolute; left: 0;" cellpadding="10" cellspacing="0">
+        <tr align="center" valign="middle">
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad1.png" alt="Logo" width="200"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad2.png" alt="Logo" width="300"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad3.png" alt="Logo" width="300"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad4.png" alt="Logo" width="300"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad7.png" alt="Logo" width="300"></a>
+            </td>
+        </tr>
+    </table>
+
+    <table border="0" style="position: absolute; right: 0;" cellpadding="10" cellspacing="0">
+        <tr align="center" valign="middle">
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad6.png" alt="Logo" width="200"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad7.png" alt="Logo" width="300"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad2.png" alt="Logo" width="300"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad3.png" alt="Logo" width="300"></a>
+            </td>
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad2.png" alt="Logo" width="300"></a>
+            </td>
+
+            <td style="display: block; margin: 0;">
+                <a href="morten-ad.html"><img src="images/ad5.png" alt="Logo" width="300"></a>
+            </td>
+        </tr>
+    </table>
+
     <table border="0" width="100%" height="100%" cellpadding="100" cellspacing="0">
         <tr>
             <td align="center" valign="middle">
@@ -81,6 +126,7 @@
             </td>
         </tr>
     </table>
+    <p style="position: fixed; bottom: 0;">Copyright ©2024 SOUNDBOKS. All rights reserved. Don't steal please.</p>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -89,6 +135,25 @@
                 audio.play();
             });
         });
+    </script>
+    <script>
+        function updateContentForBreakpoint() {
+            const imageContainer = document.getElementById("sb-desktop");
+            if (document.body.clientWidth <= 900) {
+                imageContainer.innerHTML = `
+                        <table border="0" width="100%" cellpadding="10" cellspacing="0">
+                            <tr>
+                                <td align="center" valign="middle">
+                                    <img src="images/morten-ad.jpeg" alt="Logo" width="400">
+                                    <p style="font-size: 30px;">I'm responsive!!</p>
+                                </td>
+                            </tr>
+                        </table>
+            `;
+            }
+        }
+        window.addEventListener("resize", updateContentForBreakpoint);
+        updateContentForBreakpoint();
     </script>
 </body>
 

@@ -2,9 +2,13 @@
 
 <head>
     <title>Vanilla JS Github Pages Demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+
 </head>
 
-<body background="images/sb-background.gif" style="font-family:'Times New Roman', Times, serif">
+<body id="sb-desktop" background="images/sb-background.gif"
+    style="font-family:'Times New Roman', Times, serif; color: white;">
     <audio id="sb-background-sound" style="display: none;" controls loop>
         <source src="sound/network.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -20,11 +24,11 @@
                 <a href="index.html"
                     style="color: white; text-decoration: none; border: 3px solid #f14c15; padding: 20px; font-size: 33px;">
                     Home
-                </a> &nbsp; | &nbsp;
+                </a> &nbsp; &nbsp;
                 <a href="products.html"
                     style="color: white; text-decoration: none; border: 3px solid #f14c15; padding: 20px; font-size: 33px;">
                     Products
-                </a> &nbsp; | &nbsp;
+                </a> &nbsp; &nbsp;
                 <a href="about.html"
                     style="color: white; text-decoration: none; border: 3px solid #f14c15; padding: 20px; font-size: 33px;">
                     About SB
@@ -34,17 +38,23 @@
     </table>
     <table border="0" width="100%" height="100%" cellpadding="10" cellspacing="0">
         <tr>
+            <td>
+                <img src="images/img1.png" alt="Logo" width="400">
+                <img src="images/img2.png" alt="Logo" width="300">
+                <img src="images/img3.jpeg" alt="Logo" width="400" style="display: block; margin: 0 auto;">
+            </td>
             <td align="center" valign="middle">
                 <p style="color: white; font-size: 100px; margin: 0;">PARTY EVERYWHERE</p>
                 <p style="color: white; font-size: 50px; margin: 0;">Our latest ultimate speaker!!!</p>
-                <p style="color: white; font-size: 30px; margin: 0;">Go to products to purchase the speaker and more.
+                <p style="color: white; font-size: 30px; margin: 0;">Go to products to purchase the speaker and
+                    more.
                 </p>
                 <br></br>
                 <img src="images/sb4.jpg" alt="Logo" width="500" style="display: block; margin: 0 auto;">
             </td>
         </tr>
     </table>
-
+    <p style="position: fixed; bottom: 0;">Copyright ©2024 SOUNDBOKS. All rights reserved. Don't steal please.</p>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var audio = document.getElementById('sb-background-sound');
@@ -52,6 +62,25 @@
                 audio.play();
             });
         });
+    </script>
+    <script>
+        function updateContentForBreakpoint() {
+            const imageContainer = document.getElementById("sb-desktop");
+            if (document.body.clientWidth <= 900) {
+                imageContainer.innerHTML = `
+                    <table border="0" width="100%" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <img src="images/morten-ad.jpeg" alt="Logo" width="400">
+                                <p style="font-size: 30px;">I'm responsive!!</p>
+                            </td>
+                        </tr>
+                    </table>
+        `;
+            }
+        }
+        window.addEventListener("resize", updateContentForBreakpoint);
+        updateContentForBreakpoint();
     </script>
 </body>
 
