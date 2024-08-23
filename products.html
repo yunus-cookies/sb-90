@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Vanilla JS Github Pages Demo</title>
+</head>
+
+<body background="images/sb-background.gif" style="font-family:'Times New Roman', Times, serif; color: white;">
+    <audio id="sb-background-sound" style="display: none;" controls loop>
+        <source src="sound/network.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <table border="0" width="100%" cellpadding="10" cellspacing="0">
+        <tr>
+            <td width="20%" align="left" valign="middle">
+                <img src="images/sb-90-logo.gif" alt="Logo" width="75%">
+            </td>
+            <td width="40%" align="center" valign="middle">
+            </td>
+            <td width="40%" align="right" valign="middle">
+                <a href="index.html"
+                    style="color: white; text-decoration: none; border: 3px solid #f14c15; padding: 20px; font-size: 33px;">
+                    Home
+                </a> &nbsp; &nbsp;
+                <a href="products.html"
+                    style="color: white; text-decoration: none; border: 3px solid #f14c15; padding: 20px; font-size: 33px;">
+                    Products
+                </a> &nbsp; &nbsp;
+                <a href="about.html"
+                    style="color: white; text-decoration: none; border: 3px solid #f14c15; padding: 20px; font-size: 33px;">
+                    About SB
+                </a>
+            </td>
+        </tr>
+    </table>
+    <table border="0" width="100%" height="100%" cellpadding="100" cellspacing="0">
+        <tr>
+            <td align="center" valign="middle">
+                <p style="font-size: 50px; margin: 0;">BIGGEST SELECTION OF SPEAKERS</p>
+                <p style=" font-size: 50px; margin: 0;">ULTIMATE SPEAKERS!!</p>
+                <br></br>
+
+                <table cellpadding="100" cellspacing="50">
+                    <tr>
+                        <td style="border: 3px #f14c15 solid; padding: 20px;">
+                            <p style="font-size: 20px;"><b>Title:</b> SOUNDBOKS 4</p>
+                            <p style="font-size: 20px;"><b>Price:</b> 3500,-</p>
+                            <p><a href="https://soundboks.com/products/speakers/soundboks-4" target="_blank"
+                                    style="font-size: 20px; color: #f14c15">Buy now</a></p>
+                            <img src="images/sb4.jpg" alt="Logo" width="250">
+                        </td>
+                        <td style="border: 3px #f14c15 solid; padding: 20px;">
+                            <p style="font-size: 20px;"><b>Title:</b> SOUNDBOKS GO</p>
+                            <p style="font-size: 20px;"><b>Price:</b> 3500,-</p>
+                            <p><a href="#" style="font-size: 20px; color: #f14c15">Buy now</a></p><img
+                                src="images/sbgo.jpg" alt="Logo" width="250">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 3px #f14c15 solid; padding: 20px;">
+                            <p style="font-size: 20px;"><b>Title:</b> SOUNDBOKS Backpack</p>
+                            <p style="font-size: 20px;"><b>Price:</b> 3500,-</p>
+                            <p><a href="#" style="font-size: 20px; color: #f14c15">Buy now</a></p><img
+                                src="images/sbbackpack.jpg" alt="Logo" width="250">
+                        </td>
+                        <td style="border: 3px #f14c15 solid; padding: 20px;">
+                            <p style="font-size: 20px;"><b>Title:</b> SOUNDBOKS Battery</p>
+                            <p style="font-size: 20px;"><b>Price:</b> 3500,-</p>
+                            <p><a href="#" style="font-size: 20px; color: #f14c15">Buy now</a></p><img
+                                src="images/sbbattery.jpg" alt="Logo" width="250">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 3px #f14c15 solid; padding: 20px;">
+                            <p style="font-size: 20px;"><b>Title:</b> SOUNDBOKS Charger</p>
+                            <p style="font-size: 20px;"><b>Price:</b> 3500,-</p>
+                            <p><a href="#" style="font-size: 20px; color: #f14c15">Buy now</a></p><img
+                                src="images/sbcharger.jpg" alt="Logo" width="250">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('sb-background-sound');
+            document.body.addEventListener('click', function () {
+                audio.play();
+            });
+        });
+    </script>
+</body>
+
+</html>
